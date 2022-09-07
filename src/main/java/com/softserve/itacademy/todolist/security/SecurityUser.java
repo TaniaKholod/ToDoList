@@ -1,10 +1,17 @@
 package com.softserve.itacademy.todolist.security;
 
+import com.softserve.itacademy.todolist.model.ToDo;
 import com.softserve.itacademy.todolist.model.User;
+import com.softserve.itacademy.todolist.service.ToDoService;
+import com.softserve.itacademy.todolist.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.server.ResponseStatusException;
 
+import java.security.Principal;
 import java.util.Collection;
 import java.util.List;
 

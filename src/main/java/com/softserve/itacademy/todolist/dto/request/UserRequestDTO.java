@@ -10,6 +10,7 @@ import javax.validation.constraints.Pattern;
 @Data
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class UserRequestDTO {
+
     @Pattern(regexp = "[A-Z][a-z]+",
             message = "Must start with a capital letter followed by one or more lowercase letters")
     private String firstName;
@@ -30,7 +31,5 @@ public class UserRequestDTO {
     @Pattern(regexp = ".*[a-z].*",
             message = "Must contain at least one lowercase letter")
     private String password;
-
-    private Role role;
 
 }

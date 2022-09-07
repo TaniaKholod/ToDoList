@@ -2,7 +2,8 @@ package com.softserve.itacademy.todolist.dto;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import com.softserve.itacademy.todolist.model.ToDo;
+import com.softserve.itacademy.todolist.dto.response.UserResponse;
+import com.softserve.itacademy.todolist.model.User;
 import lombok.Data;
 import lombok.Value;
 
@@ -12,24 +13,16 @@ import javax.validation.constraints.NotNull;
 @Data
 @Value
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class TaskDto {
-    long id;
+public class TodoDto {
 
-    @NotBlank(message = "The 'name' cannot be empty")
-    String name;
+    Long id;
 
-    @NotNull
-    String priority;
+    @NotBlank(message = "The 'title' cannot be empty")
+    String title;
 
     @NotNull
-    long todoId;
+    long ownerId;
 
-    TodoDto todo;
-
-    @NotNull
-    long stateId;
-
-    @NotNull
-    String state;
+    UserResponse owner;
 
 }

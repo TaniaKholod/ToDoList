@@ -15,12 +15,4 @@ public class UserResponse {
     String lastName;
     String email;
     String role;
-
-    public UserResponse(User user) {
-        id = user.getId();
-        firstName = user.getFirstName();
-        lastName = user.getLastName();
-        email = user.getEmail();
-        role = user.getRole().getName();
-    }
 }

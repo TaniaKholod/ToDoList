@@ -12,8 +12,9 @@ public class TaskTransformer {
                 task.getName(),
                 task.getPriority().toString(),
                 task.getTodo().getId(),
-                task.getTodo(),
-                task.getState().getId()
+                TodoTransformer.convertToDto(task.getTodo()),
+                task.getState().getId(),
+                task.getState().getName()
         );
     }
 
